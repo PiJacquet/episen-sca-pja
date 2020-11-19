@@ -11,3 +11,7 @@ docker-compose up
 NB sur docker-compose:
 Les tests sont réalisés par des curl (installés lors du dockerfile). Pour le post, une valeur POST est envoyé toutes les 30s.
 Vu que le mécanisme de LB n'était pas demandé, les replicas ont été laissés dans la config à 1 (problème d'appropriation du port au dessus)
+
+URL des repo :
+-Front: https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-front
+-Back : https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-back
