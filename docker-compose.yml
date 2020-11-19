@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  episen-sca-pja-back:
+    container_name: episen-sca-pja-back-container
+    image: pjacquet/episen-sca-pja-back
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/usr/local
+    healthcheck:
+        test: curl -X POST -f -i http://localhost:8080/add/order --data healthcheck
+        interval: 30s
+        timeout: 10s
+        retries: 5
+        start_period: 15s
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    restart: always
+        
+  episen-sca-pja-front:
+    container_name: episen-sca-pja-front-container
+    image: pjacquet/episen-sca-pja-front
+    expose:
+        - 8081
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./frontend:/var/log/nginx
+    healthcheck:
+        test: curl -f http://localhost:8081/ 
+        interval: 30s
+        timeout: 10s
+        retries: 5
+        start_period: 15s
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    restart: always
