@@ -14,4 +14,6 @@ Vu que le mécanisme de LB n'était pas demandé, 2 replicas sont demandés avec
 
 URL des repo :
 - Front: https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-front
+  - pjacquet/episen-sca-pja-front
 - Back : https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-back
+  - pjacquet/episen-sca-pja-back
