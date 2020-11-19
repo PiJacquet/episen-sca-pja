@@ -1,6 +1,6 @@
 Commande de builds:
--Front: docker build -t pjacquet/episen-sca-pja-front .
--Back : docker build -t pjacquet/episen-sca-pja-back .
+- Front: docker build -t pjacquet/episen-sca-pja-front .
+- Back : docker build -t pjacquet/episen-sca-pja-back .
 
 Sachant que nginx n'est pas lancé en root, le port à été changé vers 8081
 URL du front http://localhost:8081
@@ -13,5 +13,5 @@ Les tests sont réalisés par des curl (installés lors du dockerfile). Pour le 
 Vu que le mécanisme de LB n'était pas demandé, les replicas ont été laissés dans la config à 1 (problème d'appropriation du port au dessus)
 
 URL des repo :
--Front: https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-front
--Back : https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-back
+- Front: https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-front
+- Back : https://hub.docker.com/repository/docker/pjacquet/episen-sca-pja-back
